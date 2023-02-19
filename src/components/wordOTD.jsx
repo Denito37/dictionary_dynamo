@@ -1,8 +1,8 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function WOTD() {
     const [word, setWord] = useState('...')
-    const [meaning, setMeaning] = useState('...')
+    const [meaning, setMeaning] = useState('No definition found')
     const getWord = async () =>{
         let obj = await fetch('https://random-word-api.herokuapp.com/word');
         let text = await obj.json();
