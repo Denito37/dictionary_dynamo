@@ -16,7 +16,7 @@ export default function NOTD(){
         getNumber()
     },[])
     return(
-        <div className="bg-red-400 p-4 my-4 mx-auto rounded-2xl w-96 border-2">
+        <div className="bg-red-400 p-4 my-4 mx-auto rounded-2xl w-96 h-52 overflow-y-scroll border-2">
             <h1 className="text-center text-3xl">Number Of The Day !</h1>
             <h2 className="text-center text-2xl my-2">{number}</h2>
             <p className="text-center">{fact}</p>
