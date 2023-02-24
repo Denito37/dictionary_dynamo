@@ -16,8 +16,8 @@ export default function WOTD() {
     },[])
     
     return(
-        <div className=" bg-cyan-700 w-96 h-52 overflow-y-scroll rounded-2xl p-4 my-4 mx-auto border-2">
-            <h1 className="text-center text-3xl">Word Of The Day !</h1>
+        <div className=" bg-cyan-700 w-96 h-52 overflow-y-scroll rounded-2xl p-4 my-8 mx-auto border-2">
+            <h1 className="text-center text-3xl">New Word !</h1>
             <h2 className=" text-xl text-center my-4">{word}</h2>
             <p className=" text-center">{meaning}</p>
         </div>

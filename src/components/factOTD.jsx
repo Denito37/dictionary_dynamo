@@ -12,7 +12,7 @@ export default function FOTD(){
     },[])
     return(
         <div className=" bg-green-600 p-4 my-4 mx-auto border-2 rounded-2xl w-96 h-52 overflow-y-scroll">
-            <h1 className=" text-center text-3xl">Fact Of The Day !</h1>
+            <h1 className=" text-center text-3xl">New Fact !</h1>
             <p className=" text-center text-lg my-2">{fact}</p>
         </div>
     )

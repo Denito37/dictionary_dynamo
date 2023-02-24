@@ -10,12 +10,13 @@ function App() {
   return (
     <div className="App m-4">
       <Header />
-      <div className=" my-4 md:grid md:grid-cols-2 md:grid-rows-3">
-      <Dictionary />
-      <WOTD />
-      <NOTD />
-      <Flash />
-      <FOTD />
+      <div className=" my-4 md:flex md:gap-x-8">
+        <Dictionary />
+        <div>
+          <Flash />
+          <WOTD />
+          <NOTD />
+        </div>
       </div>
     </div>
   )

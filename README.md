@@ -1,4 +1,4 @@
-A dictionary with a handful of fun facts 
+A dictionary with a handful of fun facts & flash cards
 
 **Built with**
 - React JS
@@ -6,10 +6,9 @@ A dictionary with a handful of fun facts
 - free dictionary API
 - Random word API
 - number trivia API
-- useless facts API
 
 **Features**
-- get definition & example of searched words
+- get the definition & an example of searched words in a sentence
 
 **Purpose**
-- After looking for Apis to use for a project I came across a few dictionary apis which sounded like a nice project to get more used to React & tailwind with. To make my dictionary more unique I looked for more APIis that could fit in a dictionary. I ended up picking APIs that gave intersting trivia as I felt it would inspire the user with more words they would want to search up & it is also fun to know more random facts.
+- After looking for Apis to use in a project I came across a few dictionary apis which sounded like a nice project to get more used to React & tailwind with. To make my dictionary site more unique I looked for more APIs that could fit in with a dictionary. I ended up picking APIs that gave intersting trivia as I felt it would inspire the user with more words to search up.
