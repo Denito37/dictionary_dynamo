@@ -4,8 +4,8 @@ export default function NOTD(){
     const [number, setNumber] = useState('')
     const [fact, setFact] = useState('')
     const getNumber = async() =>{
-        let obj = await fetch('http://numbersapi.com/random');
-        let text = await obj.text();
+        const obj = await fetch('http://numbersapi.com/random');
+        const text = await obj.text();
         let numArray = text.split(' ')
         setNumber(numArray[0])
         numArray.shift()

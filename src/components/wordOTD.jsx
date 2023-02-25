@@ -1,15 +1,22 @@
 import { useState, useEffect } from "react";
 
 export default function WOTD() {
-    const [word, setWord] = useState('...')
-    const [meaning, setMeaning] = useState('No definition found')
+    const [word, setWord] = useState('Loading...')
+    const [meaning, setMeaning] = useState('...')
     const getWord = async () =>{
-        let obj = await fetch('https://random-word-api.herokuapp.com/word');
-        let text = await obj.json();
+        const obj = await fetch('https://random-word-api.herokuapp.com/word');
+        const text = await obj.json();
         setWord(text)
-        let job = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${text}`);
-        let writing = await job.json();
-        setMeaning(writing[0].meanings[0].definitions[0].definition)
+        try{
+            const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${text}`);
+            if(!res.ok){throw new Error(res.status);}
+            const data = await res.json();
+            setMeaning(data[0].meanings[0].definitions[0].definition)
+        }
+        catch(error){
+            console.error(`failed ${error}`)
+            setMeaning("No definition found")
+        }
     }
     useEffect(()=>{
         getWord()
