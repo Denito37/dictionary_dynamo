@@ -32,22 +32,22 @@ export default function FlashCard(){
     },[count,word,flashType])
 
     return(
-        <div className=" grid place-content-center col-start-2 my-8 mx-auto p-4 h-fit w-fit bg-gray-800 rounded-2xl border-2">
+        <section className=" grid place-content-center col-start-2 my-8 md:mt-0 mx-auto p-4 h-fit w-fit bg-gray-800 rounded-2xl border-2">
             <div className="text-center">
-                <h2>FLASH CARDS</h2>
-                <button onClick={() => setFlashType(statsVocab)} className="p-2 border-2 bg-gray-500 rounded-xl mx-2 hover:border-red-400">Stats</button>
-                <button onClick={() => setFlashType(bioVocab)} className="p-2 border-2 bg-gray-500 rounded-xl mx-2 hover:border-red-400">Bio</button>
-                <button onClick={() => setFlashType(englishVocab)} className="p-2 border-2 bg-gray-500 rounded-xl mx-2 hover:border-red-400">English</button>
+                <h2 className=" py-2 font-bold text-xl">FLASH CARDS</h2>
+                <button onClick={() => setFlashType(statsVocab)} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Stats</button>
+                <button onClick={() => setFlashType(bioVocab)} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Bio</button>
+                <button onClick={() => setFlashType(englishVocab)} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">English</button>
             </div>
             <article className=" max-w-lg p-4 rounded-2xl bg-gray-100 my-2">
                 <h2 className="text-black text-2xl">{word}</h2>
                 <p className="text-black h-24 w-96 overflow-y-scroll">{definition}</p>
                 <div className="flex justify-center items-center my-2">
-                    <button onClick={leftCounter} className="bg-gray-600 p-2 rounded-xl mx-2">Left</button>
+                    <button onClick={leftCounter} className="bg-gray-600 p-2 w-14 rounded-xl mx-2">Left</button>
                     <p className="text-black">{count}/{flashType.length}</p>
-                    <button onClick={rightCounter} className="bg-gray-600 p-2 rounded-xl mx-2">Right</button>
+                    <button onClick={rightCounter} className="bg-gray-600 p-2 w-14 rounded-xl mx-2">Right</button>
                 </div>
             </article>
-        </div>
+        </section>
     )
 }
