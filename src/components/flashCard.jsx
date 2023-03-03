@@ -43,9 +43,9 @@ export default function FlashCard(){
                 <h2 className="text-black text-2xl">{word}</h2>
                 <p className="text-black h-24 w-96 overflow-y-scroll">{definition}</p>
                 <div className="flex justify-center items-center my-2">
-                    <button onClick={leftCounter} className="bg-gray-600 p-2 w-14 rounded-xl mx-2">Left</button>
+                    <button onClick={leftCounter} className="bg-gray-600 border-2 border-slate-400 p-2 w-16 rounded-xl mx-2 transition-all hover:border-red-400">Left</button>
                     <p className="text-black">{count}/{flashType.length}</p>
-                    <button onClick={rightCounter} className="bg-gray-600 p-2 w-14 rounded-xl mx-2">Right</button>
+                    <button onClick={rightCounter} className="bg-gray-600 border-2 border-slate-400 p-2 w-16 rounded-xl mx-2 transition-all hover:border-red-400">Right</button>
                 </div>
             </article>
         </section>

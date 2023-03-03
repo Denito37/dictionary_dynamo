@@ -17,7 +17,7 @@ export default function NOTD(){
     },[])
     return(
         <section className=" bg-gray-800 col-start-2 p-4 mt-8 mx-auto rounded-2xl w-112 h-52 overflow-y-scroll border-2">
-            <h1 className="text-center text-3xl">Number Fact !</h1>
+            <h2 className="text-center text-3xl">Number Fact !</h2>
             <h2 className="text-center text-2xl my-2">{number}</h2>
             <p className="text-center">{fact}</p>
         </section>
