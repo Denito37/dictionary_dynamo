@@ -32,12 +32,12 @@ export default function FlashCard(){
     },[count,word,flashType])
 
     return(
-        <section className=" grid place-content-center col-start-2 my-8 md:mt-0 mx-auto p-4 h-fit w-fit bg-gray-800 rounded-2xl border-2">
+        <section className=" grid place-content-center col-start-2 my-4 md:mt-0 mx-auto p-4 h-fit w-fit bg-gray-800 rounded-2xl">
             <div className="text-center">
                 <h2 className=" py-2 font-bold text-xl">FLASH CARDS</h2>
-                <button onClick={() => setFlashType(statsVocab)} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Stats</button>
-                <button onClick={() => setFlashType(bioVocab)} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Bio</button>
-                <button onClick={() => setFlashType(englishVocab)} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">English</button>
+                <button onClick={() => {setFlashType(statsVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Stats</button>
+                <button onClick={() => {setFlashType(bioVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Bio</button>
+                <button onClick={() => {setFlashType(englishVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">English</button>
             </div>
             <article className=" max-w-lg p-4 rounded-2xl bg-gray-100 my-2">
                 <h2 className="text-black text-2xl">{word}</h2>
