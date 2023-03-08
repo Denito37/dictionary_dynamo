@@ -5,7 +5,6 @@ A dictionary with a handful of fun facts & flash cards
 - Tailwind CSS
 - free dictionary API
 - Random word API
-- number trivia API
 
 **Features**
 - get the definition & an example of searched words in a sentence

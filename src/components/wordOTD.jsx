@@ -23,9 +23,9 @@ export default function WOTD() {
     },[])
     
     return(
-        <section className=" md:w-112 h-52 overflow-y-scroll p-4 my-4 mx-auto">
+        <section className="p-4 my-4 mx-auto md:w-112 h-52 overflow-y-scroll">
             <h2 className="text-center text-3xl">New Word !</h2>
-            <h2 className=" text-xl text-center my-4">{word}</h2>
+            <h2 className=" text-center text-xl my-4">{word}</h2>
             <p className=" text-center">{meaning}</p>
         </section>
     )

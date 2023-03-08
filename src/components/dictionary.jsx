@@ -36,18 +36,18 @@ export default function Dictionary(){
     },[input])
 
     return(
-        <article className=" md:w-128 w-full text-xl p-4 rounded-2xl grid grid-cols-2 grid-rows-5 items-center">
-            <input onChange={event => setInput(event.target.value)} className=" bg-zinc-800 col-span-2 px-8 rounded-2xl h-3/6 text-base" type="text" placeholder="Search" />
-            <section className=" col-span-2 row-span-4 p-4 my-4 rounded-2xl h-full">
+        <article className=" text-xl p-4 md:w-128 w-full rounded-2xl grid items-center">
+            <input onChange={event => setInput(event.target.value)} className=" bg-zinc-800 text-base px-8 py-6 rounded-2xl h-3/6 w-full  " type="text" placeholder="Search" />
+            <section className="p-4 my-4 h-full">
                 <h2 className=" text-5xl capitalize">{word}</h2>
                 <hr className="my-2" />
                 <small>({speech})</small>
-                <p className ="my-2"><small className=" font-bold text-slate-400">Definition: </small>{definition}</p>
-                <p className ="my-2"> <small className=" font-bold text-slate-400">Example: </small>{example}</p>
+                <p className ="my-2"><small className=" font-bold text-slate-300">Definition: </small>{definition}</p>
+                <p className ="my-2"> <small className=" font-bold text-slate-300">Example: </small>{example}</p>
                 <hr className=" my-2" />
                 <small>({secondSpeech})</small>
-                <p className ="my-2"><small className=" font-bold text-slate-400">Definition: </small>{secondDefinition}</p>
-                <p className ="my-2"> <small className=" font-bold text-slate-400">Example: </small>{secondExample}</p>
+                <p className ="my-2"><small className=" font-bold text-slate-300">Definition: </small>{secondDefinition}</p>
+                <p className ="my-2"> <small className=" font-bold text-slate-300">Example: </small>{secondExample}</p>
             </section>
         </article>
     )

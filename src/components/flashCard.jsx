@@ -32,16 +32,16 @@ export default function FlashCard(){
     },[count,word,flashType])
 
     return(
-        <section className=" grid place-content-center md:col-start-2 my-4 md:mt-0 mx-auto p-4 w-full rounded-2xl">
+        <section className=" my-4 md:mt-0 mx-auto p-4 grid place-content-center md:col-start-2 w-full rounded-2xl">
             <div className="text-center">
                 <h2 className=" py-2 font-bold text-xl">FLASH CARDS</h2>
                 <button onClick={() => {setFlashType(statsVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Stats</button>
                 <button onClick={() => {setFlashType(bioVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Bio</button>
                 <button onClick={() => {setFlashType(englishVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">English</button>
             </div>
-            <article className=" p-4 rounded-2xl bg-gray-100 my-2">
+            <article className=" bg-gray-100 p-4 my-2 min-w-[20rem] rounded-2xl">
                 <h2 className="text-black text-2xl">{word}</h2>
-                <p className="text-black h-24 w-96 overflow-y-scroll">{definition}</p>
+                <p className="text-black h-24 md:w-96 overflow-y-scroll">{definition}</p>
                 <div className="flex justify-center items-center my-2">
                     <button onClick={leftCounter} className="bg-gray-600 border-2 border-slate-400 p-2 w-16 rounded-xl mx-2 transition-all hover:border-red-400">Left</button>
                     <p className="text-black">{count}/{flashType.length}</p>
