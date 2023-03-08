@@ -16,7 +16,7 @@ export default function NOTD(){
         getNumber()
     },[])
     return(
-        <section className=" col-start-2 p-4 mt-4 mx-auto md:w-112 h-52 overflow-y-scroll">
+        <section className=" md:col-start-2 p-4 mt-4 mx-auto md:w-112 h-52 overflow-y-scroll">
             <h2 className="text-center text-3xl">Number Fact !</h2>
             <h2 className="text-center text-2xl my-2">{number}</h2>
             <p className="text-center">{fact}</p>

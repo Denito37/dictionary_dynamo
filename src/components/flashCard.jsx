@@ -32,14 +32,14 @@ export default function FlashCard(){
     },[count,word,flashType])
 
     return(
-        <section className=" grid place-content-center col-start-2 my-4 md:mt-0 mx-auto p-4 h-fit w-fit bg-gray-800 rounded-2xl">
+        <section className=" grid place-content-center md:col-start-2 my-4 md:mt-0 mx-auto p-4 w-full rounded-2xl">
             <div className="text-center">
                 <h2 className=" py-2 font-bold text-xl">FLASH CARDS</h2>
                 <button onClick={() => {setFlashType(statsVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Stats</button>
                 <button onClick={() => {setFlashType(bioVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Bio</button>
                 <button onClick={() => {setFlashType(englishVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">English</button>
             </div>
-            <article className=" max-w-lg p-4 rounded-2xl bg-gray-100 my-2">
+            <article className=" p-4 rounded-2xl bg-gray-100 my-2">
                 <h2 className="text-black text-2xl">{word}</h2>
                 <p className="text-black h-24 w-96 overflow-y-scroll">{definition}</p>
                 <div className="flex justify-center items-center my-2">

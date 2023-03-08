@@ -7,7 +7,7 @@ import Flash from "./components/flashCard"
 function App() {
 
   return (
-    <div className="App m-4">
+    <div className=" m-4">
       <Header />
       <div className=" my-4 md:flex md:gap-x-8">
         <Dictionary />

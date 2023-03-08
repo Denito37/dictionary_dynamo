@@ -36,7 +36,7 @@ export default function Dictionary(){
     },[input])
 
     return(
-        <article className=" md:w-128 text-xl p-4 rounded-2xl grid grid-cols-2 grid-rows-5 items-center">
+        <article className=" md:w-128 w-full text-xl p-4 rounded-2xl grid grid-cols-2 grid-rows-5 items-center">
             <input onChange={event => setInput(event.target.value)} className=" bg-zinc-800 col-span-2 px-8 rounded-2xl h-3/6 text-base" type="text" placeholder="Search" />
             <section className=" col-span-2 row-span-4 p-4 my-4 rounded-2xl h-full">
                 <h2 className=" text-5xl capitalize">{word}</h2>
