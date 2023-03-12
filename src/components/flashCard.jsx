@@ -39,7 +39,7 @@ export default function FlashCard(){
                 <button onClick={() => {setFlashType(bioVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Bio</button>
                 <button onClick={() => {setFlashType(englishVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">English</button>
             </div>
-            <article className=" bg-gray-100 p-4 my-2 min-w-[20rem] rounded-2xl">
+            <article className=" bg-gray-100 p-4 my-2 md:min-w-[20rem] rounded-2xl">
                 <h2 className="text-black text-2xl">{word}</h2>
                 <p className="text-black h-24 md:w-96 overflow-y-scroll">{definition}</p>
                 <div className="flex justify-center items-center my-2">
