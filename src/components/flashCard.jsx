@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 export default function FlashCard(){
     let statsVocab = ['probability','Conditional probability', 'standard deviation', 'Binomial theorem', 'Binomial distribution', 'Frequency distribution']
     let bioVocab = ['biology', 'DNA', 'organism', 'mitochondria', 'enzyme', 'atom']
-    let englishVocab = ['climax','ball', 'sky', 'bye']
+    let englishVocab = ['literacy','grammar','diction','prose','analysis', 'topic sentence', 'climax']
     
     const [count, setCount] = useState(1)
     const [word, setWord] = useState('probability')
@@ -35,9 +35,9 @@ export default function FlashCard(){
         <section className=" my-4 md:mt-0 mx-auto p-4 grid place-content-center md:col-start-2 w-full rounded-2xl">
             <div className="text-center">
                 <h2 className=" py-2 font-bold text-xl">FLASH CARDS</h2>
-                <button onClick={() => {setFlashType(statsVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Stats</button>
-                <button onClick={() => {setFlashType(bioVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Bio</button>
-                <button onClick={() => {setFlashType(englishVocab); setCount(1)}} className="p-2 w-20 border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">English</button>
+                <button onClick={() => {setFlashType(statsVocab); setCount(1)}} className="p-2 min-w-[4rem] border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Stats</button>
+                <button onClick={() => {setFlashType(bioVocab); setCount(1)}} className="p-2 min-w-[4rem] border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Bio</button>
+                <button onClick={() => {setFlashType(englishVocab); setCount(1)}} className="p-2 min-w-[4rem] border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">English</button>
             </div>
             <article className=" bg-gray-100 p-4 my-2 md:min-w-[20rem] rounded-2xl">
                 <h2 className="text-black text-2xl">{word}</h2>
