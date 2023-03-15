@@ -11,7 +11,7 @@ function App() {
       <Header />
       <div className=" my-4 md:flex md:gap-x-8">
         <Dictionary />
-        <div className=" bg-gray-800 p-4 rounded-2xl border-2">
+        <div className=" bg-gray-800 p-4 rounded-2xl">
           <Flash />
           <WOTD />
         </div>

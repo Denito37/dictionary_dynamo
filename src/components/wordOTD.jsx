@@ -14,7 +14,6 @@ export default function WOTD() {
             setMeaning(data[0].meanings[0].definitions[0].definition)
         }
         catch(error){
-            console.error(`failed ${error}`)
             setMeaning("No definition found")
         }
     }
@@ -23,7 +22,7 @@ export default function WOTD() {
     },[])
     
     return(
-        <section className="p-4 my-4 mx-auto md:w-112 h-52 overflow-y-scroll">
+        <section className="p-8 my-4 text-slate-100 mx-auto md:w-112 w-80 h-52 overflow-y-scroll">
             <h2 className="text-center text-3xl">New Word !</h2>
             <h2 className=" text-center text-xl my-4">{word}</h2>
             <p className=" text-center">{meaning}</p>

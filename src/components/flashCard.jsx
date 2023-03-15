@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react"
+import { statsVocab, bioVocab, englishVocab, techVocab } from "./wordbank.js"
 
-export default function FlashCard(){
-    let statsVocab = ['probability','Conditional probability', 'standard deviation', 'Binomial theorem', 'Binomial distribution', 'Frequency distribution']
-    let bioVocab = ['biology', 'DNA', 'organism', 'mitochondria', 'enzyme', 'atom']
-    let englishVocab = ['literacy','grammar','diction','prose','analysis', 'topic sentence', 'climax']
-    
+export default function FlashCard(){  
     const [count, setCount] = useState(1)
     const [word, setWord] = useState('probability')
     const [definition, setDefinition] = useState('')
@@ -32,22 +29,25 @@ export default function FlashCard(){
     },[count,word,flashType])
 
     return(
-        <section className=" my-4 md:mt-0 mx-auto p-4 grid place-content-center md:col-start-2 w-full rounded-2xl">
+        <article className=" my-4 md:mt-0 mx-auto p-4 grid place-content-center md:col-start-2 w-full rounded-2xl">
             <div className="text-center">
                 <h2 className=" py-2 font-bold text-xl">FLASH CARDS</h2>
-                <button onClick={() => {setFlashType(statsVocab); setCount(1)}} className="p-2 min-w-[4rem] border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Stats</button>
-                <button onClick={() => {setFlashType(bioVocab); setCount(1)}} className="p-2 min-w-[4rem] border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">Bio</button>
-                <button onClick={() => {setFlashType(englishVocab); setCount(1)}} className="p-2 min-w-[4rem] border-2 bg-gray-500 rounded-2xl mx-2 transition-all hover:border-red-400">English</button>
+                <div className=" overflow-x-scroll flex">
+                    <button onClick={() => {setFlashType(statsVocab); setCount(1)}} className="p-2 min-w-[4rem] border-2 bg-gray-600 rounded-2xl mx-2 transition-all hover:border-red-400">Math</button>
+                    <button onClick={() => {setFlashType(bioVocab); setCount(1)}} className="p-2 min-w-[4rem] border-2 bg-gray-600 rounded-2xl mx-2 transition-all hover:border-red-400">Bio</button>
+                    <button onClick={() => {setFlashType(englishVocab); setCount(1)}} className="p-2 min-w-[4rem] border-2 bg-gray-600 rounded-2xl mx-2 transition-all hover:border-red-400">English</button>
+                    <button onClick={() => {setFlashType(techVocab); setCount(1)}} className="p-2 min-w-[4rem] border-2 bg-gray-600 rounded-2xl mx-2 transition-all hover:border-red-400">Tech</button>
+                </div>
             </div>
-            <article className=" bg-gray-100 p-4 my-2 md:min-w-[20rem] rounded-2xl">
-                <h2 className="text-black text-2xl">{word}</h2>
-                <p className="text-black h-24 md:w-96 overflow-y-scroll">{definition}</p>
+            <section className=" bg-slate-100 p-4 my-2 min-w-[19rem] max-w-[22rem] md:w-[22rem] rounded-2xl">
+                <h2 className="text-zinc-900 text-2xl capitalize">{word}</h2>
+                <p className="text-zinc-900 h-24 overflow-y-scroll">{definition}</p>
                 <div className="flex justify-center items-center my-2">
                     <button onClick={leftCounter} className="bg-gray-600 border-2 border-slate-400 p-2 w-16 rounded-xl mx-2 transition-all hover:border-red-400">Left</button>
-                    <p className="text-black">{count}/{flashType.length}</p>
+                    <p className="text-zinc-900">{count}/{flashType.length}</p>
                     <button onClick={rightCounter} className="bg-gray-600 border-2 border-slate-400 p-2 w-16 rounded-xl mx-2 transition-all hover:border-red-400">Right</button>
                 </div>
-            </article>
-        </section>
+            </section>
+        </article>
     )
 }
