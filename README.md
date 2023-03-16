@@ -1,4 +1,4 @@
-A dictionary with a handful of fun facts & flash cards
+A dictionary with extra goodies
 
 **Built with**
 - React JS
@@ -11,4 +11,4 @@ A dictionary with a handful of fun facts & flash cards
 - features compenents that randomly generate new words & trivia
 
 **Purpose**
-- After looking for Apis to use in a project I came across a few dictionary apis which sounded like a nice project to get more used to React & tailwind with. To make my dictionary site more unique I looked for more APIs that could fit in with a dictionary. I ended up picking APIs that gave intersting trivia as I felt it would inspire the user with more words to search up.
+- After looking for Apis to use in a project I came across a few dictionary apis which sounded like a nice project to get more used to React & tailwind with. To make my dictionary site more unique I looked for APIs that could fit in with a dictionary. I ended up picking APIs that I could use to inspire the user with more words to search up.

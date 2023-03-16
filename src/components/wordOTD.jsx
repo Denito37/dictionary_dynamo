@@ -22,7 +22,7 @@ export default function WOTD() {
     },[])
     
     return(
-        <section className="p-8 my-4 text-slate-100 mx-auto md:w-112 w-80 h-52 overflow-y-scroll">
+        <section className="p-8 my-4 text-slate-100 mx-auto md:max-w-[28rem] max-w-[20rem] h-52 overflow-y-scroll">
             <h2 className="text-center text-3xl">New Word !</h2>
             <h2 className=" text-center text-xl my-4">{word}</h2>
             <p className=" text-center">{meaning}</p>
