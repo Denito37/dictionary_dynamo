@@ -35,7 +35,6 @@
         'mammal',
         'mitochondria',
         'homeostasis',
-        'cellular respiration',
         'mitosis',
         'nucleus', 
         'enzyme', 

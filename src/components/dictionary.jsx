@@ -18,6 +18,7 @@ export default function Dictionary(){
     const [input, setInput]= useState('hello');
 
     const getWord = async ()=>{
+        if(input === ''){setInput('hello')}
         try{
             let obj = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${input}`);
             if(!obj.ok){throw new Error}
@@ -31,22 +32,28 @@ export default function Dictionary(){
                 synonym: text[0].meanings[0].synonyms[0],   
             });
             setSecondEntry({
-                speech:text[0].meanings[1].partOfSpeech,
-                definition:text[0].meanings[1].definitions[0].definition,
-                example: text[0].meanings[1].definitions[0].example,
-                synonym: text[0].meanings[1].synonyms[0],  
+                speech:text[0]?.meanings[1]?.partOfSpeech,
+                definition:text[0]?.meanings[1]?.definitions[0].definition,
+                example: text[0]?.meanings[1]?.definitions[0].example,
+                synonym: text[0]?.meanings[1]?.synonyms[0],  
             })
         }
         catch(error){
-            console.error(error)
+            setEntry({
+                word:'not found',
+                pronounce: '',
+                speech:'',
+                definition:'',
+                example: '',
+                synonym: '',   
+            });
             setSecondEntry({
-                speech:'not found',
-                definition:'not found',
-                example: 'not found',
-                synonym: 'not found', 
+                speech:'',
+                definition:'',
+                example: '',
+                synonym: '', 
             })
         }
-        if(input === ''){setInput('hello')}
     }
 
     useEffect(() => {
