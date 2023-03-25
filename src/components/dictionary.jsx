@@ -61,9 +61,9 @@ export default function Dictionary(){
     },[input])
 
     return(
-        <article className=" text-xl p-4 md:w-128 w-full rounded-2xl grid items-center">
+        <article className=" text-xl p-4 md:w-128 rounded-2xl grid items-center">
             <input onChange={event => setInput(event.target.value)} className=" bg-zinc-800 text-base px-8 py-6 rounded-2xl h-3/6 w-full  " type="text" placeholder="Search" />
-            <section className="p-4 my-4 h-full">
+            <section className="p-4 my-4 h-full w-full">
                 <h2 className=" text-5xl capitalize">{entry.word}</h2>
                 <p>{entry.pronounce}</p>
                 <hr className="my-2" />

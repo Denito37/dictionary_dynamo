@@ -3,29 +3,28 @@ import { useState, useEffect } from "react";
 export default function WOTD() {
     const [word, setWord] = useState('Loading...')
     const [meaning, setMeaning] = useState('...')
-    const getWord = async () =>{
-        const obj = await fetch('https://random-word-api.herokuapp.com/word');
-        const text = await obj.json();
-        setWord(text)
-        try{
-            const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${text}`);
-            if(!res.ok){throw new Error(res.status);}
-            const data = await res.json();
-            setMeaning(data[0].meanings[0].definitions[0].definition)
-        }
-        catch(error){
-            setMeaning("No definition found")
-        }
+    const [note, setNote] = useState('...')
+    const API_KEY = import.meta.env.VITE_API_KEY
+    const ofTheDay = async () =>{
+        const res = await fetch(`https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=${API_KEY}`)
+        const data = await res.json();
+        setNote(data.note)
+        setWord(data.word)
+        setMeaning(data.definitions[0].text)
     }
     useEffect(()=>{
-        getWord()
+        ofTheDay()
     },[])
     
     return(
-        <section className="p-8 my-4 text-slate-100 mx-auto md:max-w-[28rem] max-w-[20rem] h-52 overflow-y-scroll">
-            <h2 className="text-center text-3xl">New Word !</h2>
-            <h2 className=" text-center text-xl my-4">{word}</h2>
-            <p className=" text-center">{meaning}</p>
+        <section className="p-4 my-6 text-center text-slate-100 mx-auto md:max-w-[28rem] max-w-[20rem]">
+            <h2 className="text-3xl">Word Of The Day</h2>
+            <h2 className="text-xl p-2">{word}</h2>
+            <div className=" md:h-40 md:overflow-y-scroll">
+                <p className=" p-2">{meaning}</p>
+                <small className=" p-2 font-bold">Note: {note}</small>
+            </div>
+            
         </section>
     )
 }
