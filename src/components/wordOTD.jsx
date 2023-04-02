@@ -17,7 +17,7 @@ export default function WOTD() {
     },[])
     
     return(
-        <section className="p-4 my-6 text-center text-slate-100 mx-auto md:max-w-[28rem] max-w-[20rem]">
+        <section className="p-4 my-6 text-center text-slate-100 mx-auto md:max-w-[24rem] max-w-[20rem]">
             <h2 className="text-3xl">Word Of The Day</h2>
             <h2 className="text-xl p-2">{word}</h2>
             <div className=" md:h-40 md:overflow-y-scroll">
