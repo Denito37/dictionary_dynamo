@@ -3,9 +3,8 @@ export default function Footer(){
         <>
             <footer className="p-4 mx-auto text-slate-100 md:grid md:grid-cols-3 max-w-md ">
                 <h2 className="text-lg text-center p-1">
-                    Coded by: 
-                    <a className=" p-1 rounded-lg hover:bg-slate-100 hover:text-zinc-800 transition-all duration-300" href="https://denito37.github.io/wdp/" target="_blank" rel="noopener noreferrer">
-                        Me
+                    <a className=" p-1 rounded-lg hover:bg-slate-100 hover:text-zinc-800 transition-all duration-300" href="https://dev-portfolio-denito37.vercel.app" target="_blank" rel="noopener noreferrer">
+                        Portfolio
                     </a> 
                 </h2>
                 <h2 className="text-lg text-center p-1">
